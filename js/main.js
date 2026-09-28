@@ -1,45 +1,64 @@
-// KH Kinetics — small interactions only. No animation library needed.
-const header = document.querySelector("[data-header]");
-const menu = document.querySelector(".menu");
-const mobileNav = document.querySelector(".mobile-nav");
+// Day 19 — KH Kinetics
+// Small, deliberate interactions. No framework or animation library.
 
-function closeMenu() {
-  if (!menu || !mobileNav) return;
-  menu.setAttribute("aria-expanded", "false");
-  menu.setAttribute("aria-label", "Open menu");
-  mobileNav.classList.remove("open");
+const header = document.querySelector("[data-header]");
+const menuButton = document.querySelector(".menu-button");
+const mobileNav = document.querySelector(".mobile-nav");
+const heroImage = document.querySelector("[data-parallax] img");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function setMenu(open) {
+  if (!menuButton || !mobileNav) return;
+
+  menuButton.setAttribute("aria-expanded", String(open));
+  menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+  mobileNav.classList.toggle("is-open", open);
 }
 
-menu?.addEventListener("click", () => {
-  const opening = menu.getAttribute("aria-expanded") !== "true";
-  menu.setAttribute("aria-expanded", String(opening));
-  menu.setAttribute("aria-label", opening ? "Close menu" : "Open menu");
-  mobileNav?.classList.toggle("open", opening);
+menuButton?.addEventListener("click", () => {
+  setMenu(menuButton.getAttribute("aria-expanded") !== "true");
 });
 
 mobileNav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", closeMenu);
+  link.addEventListener("click", () => setMenu(false));
 });
 
-const observer = new IntersectionObserver(
-  (entries, revealObserver) => {
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add("visible");
-      revealObserver.unobserve(entry.target);
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
     });
   },
   { threshold: 0.12 }
 );
 
-document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
+document.querySelectorAll(".reveal").forEach((element) => {
+  revealObserver.observe(element);
+});
 
-let scheduled = false;
-window.addEventListener("scroll", () => {
-  if (scheduled) return;
-  scheduled = true;
-  requestAnimationFrame(() => {
-    header?.classList.toggle("scrolled", window.scrollY > 24);
-    scheduled = false;
-  });
-}, { passive: true });
+let ticking = false;
+
+function updateOnScroll() {
+  header?.classList.toggle("is-scrolled", window.scrollY > 24);
+
+  if (!reduceMotion && heroImage && window.innerWidth > 900) {
+    const shift = Math.min(window.scrollY * 0.035, 18);
+    heroImage.style.transform = `translateY(${shift}px) scale(1.035)`;
+  }
+
+  ticking = false;
+}
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(updateOnScroll);
+  },
+  { passive: true }
+);
+
+updateOnScroll();
