@@ -3,195 +3,128 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="KH Kinetics Autocare — late-hour car servicing, diagnostics and repair in Kaki Bukit, Singapore.">
-  <meta name="theme-color" content="#111619">
-  <title>KH Kinetics Autocare — Kaki Bukit, Singapore</title>
-
+  <meta name="description" content="KH Kinetics Autocare — night-friendly servicing, diagnostics and repair in Kaki Bukit, Singapore.">
+  <meta name="theme-color" content="#0d1215">
+  <title>KH Kinetics Autocare — Night-Friendly Workshop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" data-header>
-    <a class="wordmark" href="#top" aria-label="KH Kinetics Autocare home">
-      <span class="wordmark__rule"></span>
-      <strong>KH KINETICS</strong>
-      <small>AUTOCARE · SINGAPORE</small>
-    </a>
+<header class="site-header" data-header>
+  <a class="brand" href="#top"><strong>KH KINETICS</strong><span>AUTOCARE / KAKI BUKIT</span></a>
+  <nav class="desktop-nav" aria-label="Primary">
+    <a href="#diagnose">Start with the car</a><a href="#work">Workshop</a><a href="#trust">Why KH</a><a href="#visit">Visit</a>
+  </nav>
+  <a class="header-call" href="tel:+6581689939">CALL / +65 8168 9939</a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a href="#diagnose">Start with the car</a><a href="#work">Workshop</a><a href="#trust">Why KH</a><a href="#visit">Visit</a><a href="tel:+6581689939">Call workshop</a>
+  </nav>
+</header>
 
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#services">Services</a>
-      <a href="#approach">Why KH</a>
-      <a href="#reputation">Reviews</a>
-      <a href="#visit">Visit</a>
-    </nav>
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <p class="eyebrow">NIGHT-FRIENDLY WORKSHOP / SINGAPORE</p>
+    <h1>DON'T PICK<br>A SERVICE.<br><em>SHOW US THE PROBLEM.</em></h1>
+    <p class="hero-lede">You shouldn't need mechanic vocabulary to ask for help. Start with what the car is doing, then KH can inspect the cause.</p>
+    <div class="hero-actions"><a class="button button--cyan" href="#diagnose">Start with the car ↓</a><a class="text-link" href="tel:+6581689939">Or call the workshop ↗</a></div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="inspection-tag">OPEN WEEKDAYS<br><strong>TILL 11PM</strong></div>
+    <div class="car-line">
+      <span class="wheel wheel-a"></span><span class="wheel wheel-b"></span>
+      <span class="car-roof"></span><span class="car-body"></span>
+    </div>
+    <p>NO STOCK SUPERCAR.<br>JUST THE CAR YOU ACTUALLY DRIVE.</p>
+  </div>
+  <div class="hero-bottom"><span>25 KAKI BUKIT ROAD 4 / #05-33</span><span>APPOINTMENT / CALL AHEAD</span></div>
+</section>
 
-    <a class="header-cta" href="tel:+6581689939">
-      Call workshop <span aria-hidden="true">↗</span>
-    </a>
+<section class="diagnose" id="diagnose">
+  <div class="diagnose-intro">
+    <p class="section-no">01 / START HERE</p>
+    <h2>WHAT IS YOUR<br>CAR <em>DOING?</em></h2>
+    <p>Tap the closest symptom. This isn't an online diagnosis; it simply gives you a clearer starting point before you speak to the workshop.</p>
+  </div>
 
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
-      <span></span><span></span>
-    </button>
-
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-      <a href="#services">Services</a>
-      <a href="#approach">Why KH</a>
-      <a href="#reputation">Reviews</a>
-      <a href="#visit">Visit</a>
-      <a class="mobile-nav__call" href="tel:+6581689939">+65 8168 9939</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero__copy">
-        <p class="kicker"><span></span>KAKI BUKIT · WEEKDAYS TILL 11PM</p>
-        <h1>CAR CARE<br>AFTER<br><em>WORK.</em></h1>
-        <p class="hero__intro">Servicing, diagnostics and repair without giving up half a working day. Call ahead, come by later.</p>
-
-        <div class="hero__actions">
-          <a class="button button--light" href="tel:+6581689939">Talk to the workshop <b aria-hidden="true">↗</b></a>
-          <a class="underlink" href="#services">See what we work on ↓</a>
+  <div class="garage-board">
+    <div class="board-top"><span>KH / QUICK INTAKE</span><span data-status>SELECT A SYMPTOM</span></div>
+    <div class="car-stage">
+      <div class="car-map" aria-label="Car problem selector">
+        <div class="car-drawing" aria-hidden="true"><span class="map-roof"></span><span class="map-body"></span><span class="map-wheel map-wheel--front"></span><span class="map-wheel map-wheel--rear"></span><span class="map-light"></span></div>
+        <button class="hotspot hotspot--engine" data-zone="engine"><b>01</b><span>ENGINE / POWER</span></button>
+        <button class="hotspot hotspot--brake" data-zone="brake"><b>02</b><span>BRAKES / HANDLING</span></button>
+        <button class="hotspot hotspot--aircon" data-zone="aircon"><b>03</b><span>AIR-CON</span></button>
+        <button class="hotspot hotspot--electric" data-zone="electric"><b>04</b><span>ELECTRICAL</span></button>
+      </div>
+      <div class="symptom-panel">
+        <p class="panel-label">OR START WITH WHAT YOU NOTICE</p>
+        <div class="symptom-list">
+          <button data-zone="noise">Unusual noise <span>↗</span></button>
+          <button data-zone="warning">Warning light <span>↗</span></button>
+          <button data-zone="service">Routine service <span>↗</span></button>
+          <button data-zone="unsure">Not sure / check it <span>↗</span></button>
         </div>
       </div>
+    </div>
+    <div class="diagnostic-readout" aria-live="polite">
+      <div><small>YOU SELECTED</small><strong data-readout-title>Choose a symptom above</strong></div>
+      <div><small>GOOD STARTING POINT</small><p data-readout-copy>We'll show the relevant workshop category here. The mechanic still confirms the actual cause after inspection.</p></div>
+      <a class="button button--paper" href="tel:+6581689939" data-readout-call>Call and describe it ↗</a>
+    </div>
+  </div>
+</section>
 
-      <figure class="hero__media media-shell" data-parallax>
-        <img src="assets/kh-workshop-night.jpg" alt="KH Kinetics Autocare workshop at night" width="1200" height="1500">
-        <figcaption><span>KH / KAKI BUKIT</span><span>25 KAKI BUKIT RD 4</span></figcaption>
-      </figure>
+<section class="after-work">
+  <div class="clock-face" aria-hidden="true"><span>18</span><i></i><b>23</b></div>
+  <div class="after-copy">
+    <p class="section-no">02 / THE REAL DIFFERENCE</p>
+    <h2>THE WORKSHOP<br>THAT STARTS WHEN<br><em>WORK ENDS.</em></h2>
+    <p>KH Kinetics' late weekday hours make servicing possible without turning it into annual leave. Finish work, call ahead, then head to Kaki Bukit.</p>
+    <div class="time-route"><span><b>18:00</b> Finish work</span><span><b>19:00</b> Head over</span><span><b>23:00</b> Weekday close</span></div>
+  </div>
+</section>
 
-      <div class="hero__meta" aria-label="Workshop highlights">
-        <span>MON–FRI · 12:00–23:00</span>
-        <span>SAT · 11:00–18:00</span>
-      </div>
-    </section>
+<section class="work" id="work">
+  <div class="work-head"><p class="section-no">03 / REAL WORKSHOP</p><h2>NOT A CAR<br>SHOWROOM.</h2><p>Actual workshop context matters more here than glossy automotive fantasy.</p></div>
+  <div class="work-layout">
+    <figure class="shot shot--main"><img src="assets/kh-workshop-interior.jpg" alt="Inside KH Kinetics Autocare workshop" loading="lazy"><figcaption>WORKSHOP / KAKI BUKIT</figcaption></figure>
+    <figure class="shot"><img src="assets/kh-undercarriage.jpg" alt="Undercarriage work at KH Kinetics" loading="lazy"><figcaption>BRAKES / UNDERCARRIAGE</figcaption></figure>
+    <figure class="shot"><img src="assets/kh-diagnostics.jpg" alt="Vehicle diagnostics at KH Kinetics" loading="lazy"><figcaption>DIAGNOSTICS / REPAIR</figcaption></figure>
+    <div class="service-index">
+      <span>ENGINE OIL / FLUIDS</span><span>OBD / TROUBLESHOOTING</span><span>BRAKES / SUSPENSION</span><span>AIR-CON</span><span>BATTERY / LIGHTING</span><span>WALNUT / CATALYTIC CLEAN</span>
+    </div>
+  </div>
+</section>
 
-    <section class="proof-strip" aria-label="KH Kinetics at a glance">
-      <div><strong>5.0</strong><span>Google rating</span></div>
-      <div><strong>361</strong><span>Public reviews</span></div>
-      <div><strong>23:00</strong><span>Weekday closing</span></div>
-      <div><strong>#05-33</strong><span>Synergy@KB</span></div>
-    </section>
+<section class="trust" id="trust">
+  <div class="trust-statement"><p class="section-no">04 / WHY PEOPLE RETURN</p><h2>EXPLAIN IT.<br>CHECK IT.<br><em>ONLY THEN FIX IT.</em></h2></div>
+  <div class="trust-evidence">
+    <p>Public customer feedback repeatedly describes clear explanations, transparent pricing, responsiveness and a lack of hard selling.</p>
+    <div class="evidence-lines"><span>KNOWS THEIR STUFF</span><span>GREAT COMMUNICATION</span><span>NO HARD SELLING</span><span>AFTER-OFFICE HOURS</span></div>
+    <p class="source-note">Feedback themes summarized from public reviews; no quotation is presented as an official business claim.</p>
+  </div>
+</section>
 
-    <section class="approach section section--paper" id="approach">
-      <p class="section-index"><span>01</span>WHY KH</p>
+<section class="visit" id="visit">
+  <div><p class="section-no">05 / YOUR NEXT MOVE</p><h2>CALL AHEAD.<br><em>COME BY LATER.</em></h2></div>
+  <div class="visit-card">
+    <div><small>WORKSHOP</small><strong>KH KINETICS AUTOCARE</strong></div>
+    <div><small>ADDRESS</small><p>25 Kaki Bukit Road 4<br>#05-33 Synergy@KB<br>Singapore 417800</p></div>
+    <div><small>PHONE</small><a href="tel:+6581689939">+65 8168 9939 ↗</a></div>
+    <div><small>HOURS</small><p>Weekdays / till 11PM<br>Saturday / daytime</p></div>
+    <a class="button button--cyan" href="tel:+6581689939">Talk to the workshop ↗</a>
+  </div>
+</section>
+</main>
 
-      <div class="approach__headline reveal">
-        <p class="kicker kicker--dark"><span></span>THE USEFUL DIFFERENCE</p>
-        <h2>DON'T BURN<br>A HALF-DAY<br><em>ON A SERVICE.</em></h2>
-      </div>
-
-      <div class="approach__body reveal">
-        <p>KH Kinetics stays open until 11PM on weekdays. That means maintenance and repair can fit around the day you already have instead of replacing it.</p>
-
-        <ol class="time-line">
-          <li><time>18:00</time><span>Finish work</span></li>
-          <li><time>19:00</time><span>Reach Kaki Bukit</span></li>
-          <li><time>20:00+</time><span>Inspect / service</span></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="services section" id="services">
-      <div class="services__intro">
-        <p class="section-index section-index--light"><span>02</span>WORKSHOP</p>
-        <p class="kicker"><span></span>START WITH THE PROBLEM</p>
-        <h2>WHAT'S<br>GOING ON<br><em>WITH THE CAR?</em></h2>
-        <p class="services__note">You don't need to diagnose it before calling. Describe the symptom and start there.</p>
-        <a class="underlink underlink--cyan" href="tel:+6581689939">Describe the issue ↗</a>
-      </div>
-
-      <div class="service-list">
-        <article class="service-row reveal"><span class="service-row__number">01</span><div><h3>Servicing & maintenance</h3><p>Engine oil, filters, fluids and scheduled maintenance.</p></div><small>MAINTAIN</small></article>
-        <article class="service-row reveal"><span class="service-row__number">02</span><div><h3>Diagnostics & repair</h3><p>OBD checks, troubleshooting, repair and parts replacement.</p></div><small>DIAGNOSE</small></article>
-        <article class="service-row reveal"><span class="service-row__number">03</span><div><h3>Brakes & undercarriage</h3><p>Brake components, lower arms, absorbers, bearings and steering-related work.</p></div><small>CONTROL</small></article>
-        <article class="service-row reveal"><span class="service-row__number">04</span><div><h3>Air-conditioning</h3><p>Air-con flushing and cooling-system related work.</p></div><small>COOL</small></article>
-        <article class="service-row reveal"><span class="service-row__number">05</span><div><h3>Cleaning & decarbon</h3><p>Walnut blasting, catalytic cleaning and throttle-body cleaning.</p></div><small>CLEAN</small></article>
-        <article class="service-row reveal"><span class="service-row__number">06</span><div><h3>Electrical essentials</h3><p>Batteries, alternators and selected lighting replacement.</p></div><small>POWER</small></article>
-      </div>
-    </section>
-
-    <section class="work section">
-      <div class="work__heading reveal">
-        <div>
-          <p class="section-index section-index--light"><span>03</span>IN THE SHOP</p>
-          <h2>WORK YOU<br>CAN <em>SEE.</em></h2>
-        </div>
-        <p>Maintenance, diagnostics and hands-on repair from the Kaki Bukit workshop.</p>
-      </div>
-
-      <div class="work-grid">
-        <figure class="work-shot work-shot--wide reveal">
-          <img src="assets/kh-workshop-interior.jpg" alt="Inside KH Kinetics Autocare workshop" width="1600" height="1100" loading="lazy">
-          <figcaption>WORKSHOP / KAKI BUKIT</figcaption>
-        </figure>
-        <figure class="work-shot reveal">
-          <img src="assets/kh-undercarriage.jpg" alt="Undercarriage work at KH Kinetics" width="1000" height="800" loading="lazy">
-          <figcaption>BRAKES / UNDERCARRIAGE</figcaption>
-        </figure>
-        <figure class="work-shot reveal">
-          <img src="assets/kh-diagnostics.jpg" alt="Vehicle diagnostics at KH Kinetics" width="1000" height="800" loading="lazy">
-          <figcaption>DIAGNOSTICS / REPAIR</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="reputation section section--mist" id="reputation">
-      <p class="section-index"><span>04</span>REPUTATION</p>
-
-      <div class="rating reveal">
-        <span>PUBLIC GOOGLE RATING</span>
-        <strong>5.0</strong>
-        <small>361 reviews at time of research</small>
-      </div>
-
-      <div class="reputation__copy reveal">
-        <p class="kicker kicker--dark"><span></span>WHAT CUSTOMERS REPEAT</p>
-        <h2>STRAIGHT<br>ANSWERS.<br><em>NO THEATRE.</em></h2>
-
-        <div class="themes" aria-label="Recurring customer feedback themes">
-          <span>Clear explanations</span>
-          <span>Fair pricing</span>
-          <span>Responsive communication</span>
-          <span>No hard selling</span>
-          <span>Late-hour convenience</span>
-        </div>
-
-        <p class="source-note">These are recurring themes from public customer feedback, not fabricated quotations.</p>
-      </div>
-    </section>
-
-    <section class="visit section section--paper" id="visit">
-      <div class="visit__headline reveal">
-        <p class="section-index"><span>05</span>VISIT</p>
-        <p class="kicker kicker--dark"><span></span>AFTER WORK WORKS</p>
-        <h2>CALL AHEAD.<br><em>COME BY LATER.</em></h2>
-        <a class="button button--dark" href="tel:+6581689939">+65 8168 9939 <b aria-hidden="true">↗</b></a>
-      </div>
-
-      <div class="visit__details reveal">
-        <div><small>ADDRESS</small><p>25 Kaki Bukit Road 4<br>#05-33 Synergy@KB<br>Singapore 417800</p></div>
-        <div><small>HOURS</small><p>Mon–Fri · 12:00–23:00<br>Saturday · 11:00–18:00<br>Sunday · Closed</p></div>
-        <a class="underlink underlink--dark" href="https://www.google.com/maps/search/?api=1&query=25+Kaki+Bukit+Road+4+Singapore+417800" target="_blank" rel="noopener">Open in Maps ↗</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <a class="wordmark" href="#top" aria-label="Back to top">
-      <span class="wordmark__rule"></span>
-      <strong>KH KINETICS</strong>
-      <small>AUTOCARE · SINGAPORE</small>
-    </a>
-    <p>Night-friendly autocare · Kaki Bukit</p>
-    <a href="#top">BACK TO TOP ↑</a>
-  </footer>
-
-  <div class="mobile-callbar"><a href="tel:+6581689939">CALL WORKSHOP <b aria-hidden="true">↗</b></a></div>
-  <script src="js/main.js"></script>
+<footer><strong>KH KINETICS</strong><span>NIGHT-FRIENDLY AUTOCARE / KAKI BUKIT</span><a href="#top">TOP ↑</a></footer>
+<div class="mobile-call"><a href="tel:+6581689939">CALL KH KINETICS <span>↗</span></a></div>
+<script src="js/main.js"></script>
 </body>
 </html>
