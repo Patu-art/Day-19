@@ -55,12 +55,24 @@
   <div class="garage-board">
     <div class="board-top"><span>KH / QUICK INTAKE</span><span data-status>SELECT A SYMPTOM</span></div>
     <div class="car-stage">
-      <div class="car-map" aria-label="Car problem selector">
-        <div class="car-drawing" aria-hidden="true"><span class="map-roof"></span><span class="map-body"></span><span class="map-wheel map-wheel--front"></span><span class="map-wheel map-wheel--rear"></span><span class="map-light"></span></div>
-        <button class="hotspot hotspot--engine" data-zone="engine"><b>01</b><span>ENGINE / POWER</span></button>
-        <button class="hotspot hotspot--brake" data-zone="brake"><b>02</b><span>BRAKES / HANDLING</span></button>
-        <button class="hotspot hotspot--aircon" data-zone="aircon"><b>03</b><span>AIR-CON</span></button>
-        <button class="hotspot hotspot--electric" data-zone="electric"><b>04</b><span>ELECTRICAL</span></button>
+      <div class="car-map">
+        <img
+          class="car-selector-image"
+          src="assets/kh-diagnostic-selector.jpg"
+          alt="Everyday car in a workshop showing Engine / Power, Air-Con, Electrical and Brakes / Handling areas"
+        >
+        <button class="image-hotspot image-hotspot--engine" data-zone="engine" aria-label="Engine / Power">
+          <span class="visually-hidden">Engine / Power</span>
+        </button>
+        <button class="image-hotspot image-hotspot--aircon" data-zone="aircon" aria-label="Air-Con">
+          <span class="visually-hidden">Air-Con</span>
+        </button>
+        <button class="image-hotspot image-hotspot--electric" data-zone="electric" aria-label="Electrical">
+          <span class="visually-hidden">Electrical</span>
+        </button>
+        <button class="image-hotspot image-hotspot--brake" data-zone="brake" aria-label="Brakes / Handling">
+          <span class="visually-hidden">Brakes / Handling</span>
+        </button>
       </div>
       <div class="symptom-panel">
         <p class="panel-label">OR START WITH WHAT YOU NOTICE</p>
