@@ -1,64 +1,17 @@
-// Day 19 — KH Kinetics
-// Small, deliberate interactions. No framework or animation library.
+const header=document.querySelector("[data-header]");const menu=document.querySelector(".menu-button");const mobile=document.querySelector(".mobile-nav");
+function setMenu(open){if(!menu||!mobile)return;menu.setAttribute("aria-expanded",String(open));mobile.classList.toggle("is-open",open)}
+menu?.addEventListener("click",()=>setMenu(menu.getAttribute("aria-expanded")!=="true"));mobile?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
 
-const header = document.querySelector("[data-header]");
-const menuButton = document.querySelector(".menu-button");
-const mobileNav = document.querySelector(".mobile-nav");
-const heroImage = document.querySelector("[data-parallax] img");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-function setMenu(open) {
-  if (!menuButton || !mobileNav) return;
-
-  menuButton.setAttribute("aria-expanded", String(open));
-  menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
-  mobileNav.classList.toggle("is-open", open);
-}
-
-menuButton?.addEventListener("click", () => {
-  setMenu(menuButton.getAttribute("aria-expanded") !== "true");
-});
-
-mobileNav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => setMenu(false));
-});
-
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  },
-  { threshold: 0.12 }
-);
-
-document.querySelectorAll(".reveal").forEach((element) => {
-  revealObserver.observe(element);
-});
-
-let ticking = false;
-
-function updateOnScroll() {
-  header?.classList.toggle("is-scrolled", window.scrollY > 24);
-
-  if (!reduceMotion && heroImage && window.innerWidth > 900) {
-    const shift = Math.min(window.scrollY * 0.035, 18);
-    heroImage.style.transform = `translateY(${shift}px) scale(1.035)`;
-  }
-
-  ticking = false;
-}
-
-window.addEventListener(
-  "scroll",
-  () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(updateOnScroll);
-  },
-  { passive: true }
-);
-
-updateOnScroll();
+const diagnoses={
+ engine:{title:"Engine / power",copy:"Describe loss of power, rough running, fluid concerns or unusual engine behaviour. KH lists servicing, troubleshooting, diagnostics and repair among its workshop work."},
+ brake:{title:"Brakes / handling",copy:"Start here for braking, steering, suspension or undercarriage concerns such as pads, rotors, lower arms, absorbers, bearings or steering-related work."},
+ aircon:{title:"Air-conditioning",copy:"Tell the workshop whether cooling is weak, inconsistent or absent. KH lists air-con maintenance and flushing among its services."},
+ electric:{title:"Electrical",copy:"Useful starting point for battery, alternator, selected lighting or other basic electrical concerns."},
+ noise:{title:"Unusual noise",copy:"Don't guess the part. Describe when the sound happens—braking, turning, accelerating, idling or over bumps—and let inspection narrow it down."},
+ warning:{title:"Warning light",copy:"Note which warning appeared and when. A diagnostic check can be the sensible first step before replacing anything."},
+ service:{title:"Routine service",copy:"For scheduled maintenance, start with your car model, mileage and what was done at the previous service."},
+ unsure:{title:"Not sure / check it",copy:"That's enough information to start. Explain what changed in the way the car feels, sounds or behaves and ask for an inspection."}
+};
+const controls=[...document.querySelectorAll("[data-zone]")];const title=document.querySelector("[data-readout-title]");const copy=document.querySelector("[data-readout-copy]");const status=document.querySelector("[data-status]");
+controls.forEach(button=>button.addEventListener("click",()=>{const key=button.dataset.zone;const item=diagnoses[key];if(!item)return;controls.forEach(x=>x.classList.toggle("is-active",x===button));title.textContent=item.title;copy.textContent=item.copy;status.textContent="STARTING POINT / "+item.title.toUpperCase();document.querySelector(".diagnostic-readout")?.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"})}));
+window.addEventListener("scroll",()=>header?.classList.toggle("is-scrolled",scrollY>20),{passive:true});
