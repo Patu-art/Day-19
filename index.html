@@ -20,7 +20,7 @@
     <a href="#diagnose">Start with the car</a><a href="#work">Workshop</a><a href="#trust">Why KH</a><a href="#visit">Visit</a>
   </nav>
   <a class="header-call" href="tel:+6581689939">CALL / +65 8168 9939</a>
-  <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+  <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
     <a href="#diagnose">Start with the car</a><a href="#work">Workshop</a><a href="#trust">Why KH</a><a href="#visit">Visit</a><a href="tel:+6581689939">Call workshop</a>
   </nav>
@@ -59,32 +59,35 @@
         <img
           class="car-selector-image"
           src="assets/kh-diagnostic-selector.jpg"
+          width="640"
+          height="480"
           alt="Everyday car in a workshop showing Engine / Power, Air-Con, Electrical and Brakes / Handling areas"
+          decoding="async"
         >
-        <button class="image-hotspot image-hotspot--engine" data-zone="engine" aria-label="Engine / Power">
+        <button class="image-hotspot image-hotspot--engine" type="button" data-zone="engine" aria-label="Engine / Power">
           <span class="visually-hidden">Engine / Power</span>
         </button>
-        <button class="image-hotspot image-hotspot--aircon" data-zone="aircon" aria-label="Air-Con">
+        <button class="image-hotspot image-hotspot--aircon" type="button" data-zone="aircon" aria-label="Air-Con">
           <span class="visually-hidden">Air-Con</span>
         </button>
-        <button class="image-hotspot image-hotspot--electric" data-zone="electric" aria-label="Electrical">
+        <button class="image-hotspot image-hotspot--electric" type="button" data-zone="electric" aria-label="Electrical">
           <span class="visually-hidden">Electrical</span>
         </button>
-        <button class="image-hotspot image-hotspot--brake" data-zone="brake" aria-label="Brakes / Handling">
+        <button class="image-hotspot image-hotspot--brake" type="button" data-zone="brake" aria-label="Brakes / Handling">
           <span class="visually-hidden">Brakes / Handling</span>
         </button>
       </div>
       <div class="symptom-panel">
         <p class="panel-label">OR START WITH WHAT YOU NOTICE</p>
         <div class="symptom-list">
-          <button data-zone="noise">Unusual noise <span>↗</span></button>
-          <button data-zone="warning">Warning light <span>↗</span></button>
-          <button data-zone="service">Routine service <span>↗</span></button>
-          <button data-zone="unsure">Not sure / check it <span>↗</span></button>
+          <button type="button" data-zone="noise">Unusual noise <span>↗</span></button>
+          <button type="button" data-zone="warning">Warning light <span>↗</span></button>
+          <button type="button" data-zone="service">Routine service <span>↗</span></button>
+          <button type="button" data-zone="unsure">Not sure / check it <span>↗</span></button>
         </div>
       </div>
     </div>
-    <div class="diagnostic-readout" aria-live="polite">
+    <div class="diagnostic-readout" aria-live="polite" aria-atomic="true">
       <div><small>YOU SELECTED</small><strong data-readout-title>Choose a symptom above</strong></div>
       <div><small>GOOD STARTING POINT</small><p data-readout-copy>We'll show the relevant workshop category here. The mechanic still confirms the actual cause after inspection.</p></div>
       <a class="button button--paper" href="tel:+6581689939" data-readout-call>Call and describe it ↗</a>
@@ -105,9 +108,9 @@
 <section class="work" id="work">
   <div class="work-head"><p class="section-no">03 / REAL WORKSHOP</p><h2>NOT A CAR<br>SHOWROOM.</h2><p>Actual workshop context matters more here than glossy automotive fantasy.</p></div>
   <div class="work-layout">
-    <figure class="shot shot--main"><img src="assets/kh-engine-service.jpg" alt="Mechanic servicing a vehicle engine at KH Kinetics Autocare" loading="lazy"><figcaption>ENGINE SERVICE / REAL WORKSHOP</figcaption></figure>
-    <figure class="shot"><img src="assets/kh-dashboard-electrical.jpg" alt="Dashboard removed for electrical work at KH Kinetics Autocare" loading="lazy"><figcaption>ELECTRICAL / DASHBOARD</figcaption></figure>
-    <figure class="shot"><img src="assets/kh-aircon-service.jpg" alt="Vehicle connected to an air-conditioning service machine at KH Kinetics Autocare" loading="lazy"><figcaption>AIR-CON / SERVICE</figcaption></figure>
+    <figure class="shot shot--main"><img src="assets/kh-engine-service.jpg" width="750" height="1000" alt="Mechanic servicing a vehicle engine at KH Kinetics Autocare" loading="lazy" decoding="async"><figcaption>ENGINE SERVICE / REAL WORKSHOP</figcaption></figure>
+    <figure class="shot"><img src="assets/kh-dashboard-electrical.jpg" width="1000" height="750" alt="Dashboard removed for electrical work at KH Kinetics Autocare" loading="lazy" decoding="async"><figcaption>ELECTRICAL / DASHBOARD</figcaption></figure>
+    <figure class="shot"><img src="assets/kh-aircon-service.jpg" width="896" height="1000" alt="Vehicle connected to an air-conditioning service machine at KH Kinetics Autocare" loading="lazy" decoding="async"><figcaption>AIR-CON / SERVICE</figcaption></figure>
     <div class="service-index">
       <span>ENGINE OIL / FLUIDS</span><span>OBD / TROUBLESHOOTING</span><span>BRAKES / SUSPENSION</span><span>AIR-CON</span><span>BATTERY / LIGHTING</span><span>WALNUT / CATALYTIC CLEAN</span>
     </div>
