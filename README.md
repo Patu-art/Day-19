@@ -30,13 +30,17 @@ The website therefore emphasizes:
 - structural workshop blue
 - restrained cyan signal accent
 - condensed mechanical typography
-- schematic car drawing built with CSS rather than a generic stock supercar
+- schematic car drawing instead of a generic stock-supercar hero
 - genuine workshop images where available
-- no animation library, WebGL or heavy 3D
+- technology chosen by fit: HTML/CSS/JS, SVG, Canvas, WebGL, Three.js, GSAP or a framework may be used when it materially improves the concept, remains maintainable and performs appropriately
 
 ## Performance
 
-Plain semantic HTML, CSS and small vanilla JavaScript only. The interactive diagnostic board uses buttons and text state changes, so the main experience remains lightweight on older phones and PCs.
+This version needs only semantic HTML, CSS and small vanilla JavaScript because the diagnostic-board interaction does not benefit enough from a heavier rendering stack. That is a project decision, not a SITEPRO restriction. Future iterations may use more advanced rendering or animation when the business concept justifies it.
+
+## SITEPRO code gate
+
+Before delivery, source is checked for readable indentation, semantic naming, meaningful variables, sensible responsive breakpoints, accessible interaction state, reduced-motion behaviour, maintainable functions, valid asset paths, and removal of generated-looking compression or needless repetition.
 
 ## Project
 
