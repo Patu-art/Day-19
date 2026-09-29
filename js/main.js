@@ -18,17 +18,21 @@ const diagnoses = {
   engine: {
     title: "Engine / power",
     copy:
-      "Describe loss of power, rough running, fluid concerns or unusual engine behaviour. KH lists servicing, troubleshooting, diagnostics and repair among its workshop work.",
+      "Describe loss of power, rough running, fluid concerns or unusual engine " +
+      "behaviour. KH lists servicing, troubleshooting, diagnostics and repair " +
+      "among its workshop work.",
   },
   brake: {
     title: "Brakes / handling",
     copy:
-      "Start here for braking, steering, suspension or undercarriage concerns such as pads, rotors, lower arms, absorbers, bearings or steering-related work.",
+      "Start here for braking, steering, suspension or undercarriage concerns " +
+      "such as pads, rotors, lower arms, absorbers, bearings or steering-related work.",
   },
   aircon: {
     title: "Air-conditioning",
     copy:
-      "Tell the workshop whether cooling is weak, inconsistent or absent. KH lists air-con maintenance and flushing among its services.",
+      "Tell the workshop whether cooling is weak, inconsistent or absent. " +
+      "KH lists air-con maintenance and flushing among its services.",
   },
   electric: {
     title: "Electrical",
@@ -38,12 +42,14 @@ const diagnoses = {
   noise: {
     title: "Unusual noise",
     copy:
-      "Don't guess the part. Describe when the sound happens—braking, turning, accelerating, idling or over bumps—and let inspection narrow it down.",
+      "Don't guess the part. Describe when the sound happens—braking, turning, " +
+      "accelerating, idling or over bumps—and let inspection narrow it down.",
   },
   warning: {
     title: "Warning light",
     copy:
-      "Note which warning appeared and when. A diagnostic check can be the sensible first step before replacing anything.",
+      "Note which warning appeared and when. A diagnostic check can be the " +
+      "sensible first step before replacing anything.",
   },
   service: {
     title: "Routine service",
@@ -53,7 +59,8 @@ const diagnoses = {
   unsure: {
     title: "Not sure / check it",
     copy:
-      "That's enough information to start. Explain what changed in the way the car feels, sounds or behaves and ask for an inspection.",
+      "That's enough information to start. Explain what changed in the way " +
+      "the car feels, sounds or behaves and ask for an inspection.",
   },
 };
 
