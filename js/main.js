@@ -97,6 +97,18 @@ mobileNav?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => setMenu(false));
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMenu(false);
+});
+
+window.addEventListener(
+  "resize",
+  () => {
+    if (window.innerWidth > 900) setMenu(false);
+  },
+  { passive: true }
+);
+
 diagnosticControls.forEach((control) => {
   control.setAttribute("aria-pressed", "false");
   control.addEventListener("click", () => selectDiagnosis(control));
