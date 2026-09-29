@@ -1,75 +1,45 @@
 # Day 19 — KH Kinetics Autocare
 
-A conversion-focused frontend concept for **KH Kinetics Autocare**, a night-friendly automotive workshop in Kaki Bukit, Singapore.
+Frontend concept for **KH Kinetics Autocare**, a night-friendly workshop in Kaki Bukit, Singapore.
 
-## Why this business
+## Rebuild direction
 
-KH Kinetics already has a strong public reputation. The useful website opportunity is not “make the garage look premium”; it is to give drivers a clear first-party place to understand services, workshop hours, location and the late-hour advantage without piecing information together across marketplace listings and calls.
+Day 19 deliberately avoids the usual automotive-template formula of a stock sports car, red/black gradients, service cards and decorative motion.
 
-## Design direction
+The core interface starts from the **car and the driver's symptom**. Visitors can select a car area or a plain-language symptom such as unusual noise, a warning light, routine servicing or simply “not sure”. The page then gives a sensible category to discuss with the workshop.
 
-The interface is based on the workshop's real visual environment rather than a generic black/red performance-car template.
+This is an intake aid, **not an online diagnosis**. The actual cause still requires workshop inspection.
 
-- Charcoal / near-black base
-- Workshop white
-- Blue drawn from the physical workshop bays
-- Cyan/teal accent inspired by the illuminated signage
-- Condensed mechanical display typography with restrained body type
-- Asymmetrical editorial layout instead of repeated card grids
-- Genuine workshop imagery only; stock-car imagery is intentionally avoided
+## Why this fits KH
 
-## UX priorities
+Public KH Kinetics listings cover servicing and preventive maintenance, diagnostics/troubleshooting, brakes and suspension, air-con work, batteries/electrical items, parts replacement and cleaning/decarbon services. Public customer feedback repeatedly praises clear explanations, responsiveness, fair/transparent pricing and a lack of hard selling. Late weekday availability is also a recurring differentiator.
 
-- Make the **weekday 11PM closing time** immediately understandable
-- Let uncertain customers start from the problem instead of choosing a confusing package
-- Keep the workshop phone CTA visible and obvious
-- Present services in plain categories
-- Use public reputation as trust support without inventing testimonials
-- Keep navigation and tap targets practical on mobile
+The website therefore emphasizes:
 
-## Current sections
+- start with the symptom, not mechanic jargon
+- inspect before assuming the repair
+- explain clearly
+- no unnecessary replacement language
+- after-office-hours convenience
+- direct phone contact
 
-1. Hero / late-hour positioning
-2. Public reputation signals
-3. Why KH / after-work timeline
-4. Workshop services
-5. Customer-feedback themes
-6. Genuine-work asset area
-7. Address, hours and contact
+## Visual system
 
-## Project structure
+- charcoal workshop environment
+- off-white inspection-board surfaces
+- structural workshop blue
+- restrained cyan signal accent
+- condensed mechanical typography
+- schematic car drawing built with CSS rather than a generic stock supercar
+- genuine workshop images where available
+- no animation library, WebGL or heavy 3D
 
-```text
-Day-19/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-└── README.md
-```
+## Performance
 
-## Asset status
+Plain semantic HTML, CSS and small vanilla JavaScript only. The interactive diagnostic board uses buttons and text state changes, so the main experience remains lightweight on older phones and PCs.
 
-The layout currently contains deliberate image frames. They should be replaced only with approved, genuine KH Kinetics JPG/JPEG assets such as:
+## Project
 
-- workshop at night
-- mechanic working
-- brake / undercarriage work
-- diagnostics equipment
-- workshop interior or exterior
-- genuine KH Kinetics logo, if available for use
-
-No unrelated stock garage imagery should be presented as KH Kinetics.
-
-## Performance & accessibility
-
-The project uses plain HTML, CSS and lightweight JavaScript. There is no animation framework. It includes reduced-motion support, semantic sections, keyboard-accessible navigation, a skip link, responsive layouts and a mobile call CTA.
-
-## Live demo
-
-https://patu-art.github.io/Day-19/
-
----
+Live: https://patu-art.github.io/Day-19/
 
 **100 Days · 100 Local Business Websites — Day 19**
