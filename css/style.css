@@ -238,10 +238,25 @@ h2 em {
   position:relative;
   height:min(58vh,560px);
   border:1px solid var(--line-on-dark);
-  background:linear-gradient(150deg,
-#172127,
-#0f1518);
+  background:#0f1518;
   overflow:hidden
+}
+
+.hero-photo {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 46%
+}
+
+.hero-photo-shade {
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(13, 18, 21, .08) 20%, rgba(13, 18, 21, .72) 100%),
+    linear-gradient(90deg, rgba(13, 18, 21, .18), transparent 58%)
 }
 
 .inspection-tag {
@@ -249,12 +264,14 @@ h2 em {
   z-index:2;
   top:22px;
   right:22px;
-  padding:11px;
-  border:1px solid #36525c;
-  color:#8e9a9f;
+  padding:11px 13px;
+  border:1px solid rgba(255, 255, 255, .28);
+  background:rgba(13, 18, 21, .78);
+  color:#d1dadd;
   font-size:13px;
   line-height:1.5;
-  letter-spacing:.1em
+  letter-spacing:.1em;
+  backdrop-filter:blur(6px)
 }
 
 .inspection-tag strong {
@@ -262,65 +279,16 @@ h2 em {
   font:600 22px var(--font-display)
 }
 
-.car-line {
-  position:absolute;
-  left:9%;
-  right:9%;
-  top:35%;
-  height:34%;
-  border-bottom:2px solid #6e7b80
-}
-
-.car-body {
-  position:absolute;
-  left:4%;
-  right:3%;
-  bottom:22%;
-  height:34%;
-  border:2px solid #849197;
-  border-top:0;
-  transform:skewX(-8deg)
-}
-
-.car-roof {
-  position:absolute;
-  left:28%;
-  top:7%;
-  width:45%;
-  height:40%;
-  border:2px solid var(--signal-cyan);
-  border-bottom:0;
-  border-radius:50% 60% 0 0;
-  transform:skewX(-15deg)
-}
-
-.wheel {
-  position:absolute;
-  bottom:3%;
-  width:18%;
-  aspect-ratio:1;
-  border:3px solid #9ba6aa;
-  border-radius:50%;
-  background:var(--surface-dark);
-  box-shadow:inset 0 0 0 8px var(--workshop-ink)
-}
-
-.wheel-a {
-  left:15%
-}
-
-.wheel-b {
-  right:12%
-}
-
 .hero-visual>p {
   position:absolute;
+  z-index:2;
   left:22px;
   bottom:18px;
   margin:0;
-  color:#5f6c71;
+  color:#f0f4f5;
   font:600 16px/1.1 var(--font-display);
-  letter-spacing:.06em
+  letter-spacing:.06em;
+  text-shadow:0 2px 14px rgba(0, 0, 0, .55)
 }
 
 .hero-bottom {
@@ -997,12 +965,6 @@ footer {
 .inspection-tag {
   top:14px;
   right:14px
-}
-
-.car-line {
-  left:5%;
-  right:5%;
-  top:38%
 }
 
 .diagnose h2,
